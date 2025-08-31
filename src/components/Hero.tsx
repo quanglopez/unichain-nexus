@@ -80,14 +80,9 @@ export const Hero = () => {
           </div>
           
           {/* Floating elements */}
-          <div className="absolute -top-4 -right-4 glass rounded-lg p-3 animate-pulse">
-            <div className="text-xs font-semibold text-primary">ILO LIVE</div>
-          </div>
           
-          <div className="absolute -bottom-4 -left-4 glass rounded-lg p-3">
-            <div className="text-xs font-semibold text-foreground">Uniilive</div>
-            <div className="text-primary text-sm">Global</div>
-          </div>
+          
+          
         </div>
       </div>
     </section>;
