@@ -49,6 +49,19 @@ export const Team = () => {
           </p>
         </div>
 
+        {/* Official Team Presentation */}
+        <div className="mb-16">
+          <Card className="glass overflow-hidden">
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/78dd16a9-f8fc-4a52-abf9-a081868ec3bd.png"
+                alt="UniLive Team - Steven (CEO), Christy (CMO), Jonathan (Independent Director & Advisor), Timur (Advisor)"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Team Members */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {teamMembers.map((member, index) => (
