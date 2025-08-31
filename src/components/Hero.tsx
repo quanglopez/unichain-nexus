@@ -86,7 +86,7 @@ export const Hero = () => {
           
           <div className="absolute -bottom-4 -left-4 glass rounded-lg p-3">
             <div className="text-xs font-semibold text-foreground">Uniilive</div>
-            <div className="text-primary text-sm">+24.5%</div>
+            <div className="text-primary text-sm">Global</div>
           </div>
         </div>
       </div>
