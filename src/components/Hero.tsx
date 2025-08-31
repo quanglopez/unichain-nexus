@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, TrendingUp, Star, CheckCircle, Users, Globe } from "lucide-react";
-import heroImage from "@/assets/hero-trading.jpg";
+const heroImage = "/lovable-uploads/297c370f-d3f9-48b1-aec2-e4523fbf348e.png";
 
 export const Hero = () => {
   return (
@@ -102,7 +102,7 @@ export const Hero = () => {
           <div className="glass rounded-2xl p-4 glow-green">
             <img 
               src={heroImage} 
-              alt="UniLive × UniMex Trading Interface" 
+              alt="UniLive Global Community - Local Touch, Global Reach" 
               className="w-full h-auto rounded-xl"
             />
           </div>
