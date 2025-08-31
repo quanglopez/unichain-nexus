@@ -19,7 +19,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: 'Xin chào! Tôi là trợ lý AI của UniLive. Tôi có thể giúp bạn tư vấn về trading, đầu tư và các dịch vụ của chúng tôi. Bạn cần hỗ trợ gì?',
+      content: 'Hello! I am UniLive\'s AI assistant. I can help you with trading advice, investment guidance, and our platform services. What can I help you with today?',
       role: 'assistant',
       timestamp: new Date()
     }
@@ -80,8 +80,8 @@ const ChatBot = () => {
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Lỗi",
-        description: "Không thể gửi tin nhắn. Vui lòng thử lại.",
+        title: "Error",
+        description: "Unable to send message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -113,7 +113,7 @@ const ChatBot = () => {
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
         <div className="flex items-center space-x-2">
           <Bot className="h-5 w-5 text-primary" />
-          <CardTitle className="text-lg">Tư vấn AI UniLive</CardTitle>
+          <CardTitle className="text-lg">UniLive AI Advisor</CardTitle>
         </div>
         <Button
           variant="ghost"
@@ -176,7 +176,7 @@ const ChatBot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Nhập câu hỏi của bạn..."
+              placeholder="Type your question here..."
               disabled={isLoading}
               className="flex-1"
             />
