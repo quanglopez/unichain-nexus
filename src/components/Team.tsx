@@ -98,13 +98,39 @@ export const Team = () => {
           ))}
         </div>
 
+        {/* Investment Institutions */}
+        <div className="mb-12">
+          <Card className="glass overflow-hidden">
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/cc1f0478-2e21-4b7d-8db1-b93af77e6c32.png"
+                alt="Investment Institution Partners - BitMart, EMURGO, TAISU, JuCoin, ADAVERSE, AC Capital, DePIN X, Moore Labs"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Exclusive Support */}
+        <div className="mb-12">
+          <Card className="glass overflow-hidden">
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/cf08c31d-70d8-4740-8ca8-d250970df386.png"
+                alt="Exclusive Support by Crypto X - Web3.0 Growth-as-a-Service Platform"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Partners & Investors */}
         <div className="space-y-12">
           <Card className="glass">
             <CardHeader>
               <CardTitle className="text-center flex items-center justify-center gap-3">
                 <Building className="w-6 h-6 text-primary" />
-                Strategic Partners & Investors
+                Additional Strategic Partners
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -120,41 +146,6 @@ export const Team = () => {
             </CardContent>
           </Card>
 
-          {/* Exclusive Support */}
-          <Card className="glass border-primary/30">
-            <CardHeader>
-              <CardTitle className="text-center flex items-center justify-center gap-3">
-                <Award className="w-6 h-6 text-primary" />
-                Exclusive Support: Crypto X
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="space-y-2">
-                  <Globe className="w-8 h-8 text-primary mx-auto" />
-                  <h4 className="font-semibold">Omni-Channel Growth</h4>
-                  <p className="text-sm text-foreground/80">
-                    Multi-platform marketing and user acquisition strategies
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <Building className="w-8 h-8 text-primary mx-auto" />
-                  <h4 className="font-semibold">Brand Support</h4>
-                  <p className="text-sm text-foreground/80">
-                    Strategic branding and positioning for global markets
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <Award className="w-8 h-8 text-primary mx-auto" />
-                  <h4 className="font-semibold">Data Optimization</h4>
-                  <p className="text-sm text-foreground/80">
-                    Advanced analytics and performance optimization
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Global Expansion */}
           <Card className="glass">
             <CardHeader>
@@ -164,7 +155,7 @@ export const Team = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
                   "🌏 Asia-Pacific Hub",
-                  "🌍 European Expansion",
+                  "🌍 European Expansion", 
                   "🌎 Americas Growth",
                   "🚀 Community Campaigns"
                 ].map((item, index) => (
