@@ -91,7 +91,7 @@ export const BusinessPresentation = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-primary" />
-                  Speakers
+                  Featured Speakers
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -115,6 +115,70 @@ export const BusinessPresentation = () => {
                     </div>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Community Leaders & Additional Speakers */}
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            Global Community Leaders & Speakers
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Card className="glass overflow-hidden hover:scale-105 transition-smooth">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/325c4ae9-6510-4c01-ae53-e294c36c2517.png" 
+                  alt="Denys Vasylkov - Web3 Talking Head"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <CardContent className="p-4 text-center">
+                <div className="font-semibold">Denys Vasylkov</div>
+                <div className="text-sm text-foreground/60">Web3 Talking Head</div>
+              </CardContent>
+            </Card>
+
+            <Card className="glass overflow-hidden hover:scale-105 transition-smooth">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/5ec055a1-41bb-4723-ad05-5b95267263dd.png" 
+                  alt="Mr Jason - Europe Community Founder"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <CardContent className="p-4 text-center">
+                <div className="font-semibold">Mr Jason</div>
+                <div className="text-sm text-foreground/60">Europe Community Founder</div>
+              </CardContent>
+            </Card>
+
+            <Card className="glass overflow-hidden hover:scale-105 transition-smooth">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/3c092e4c-42a0-42b6-b7ff-c6a10ee77bfb.png" 
+                  alt="Mr Shandu - South Africa Community Leader"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <CardContent className="p-4 text-center">
+                <div className="font-semibold">Mr Shandu</div>
+                <div className="text-sm text-foreground/60">South Africa No.1 Leader</div>
+              </CardContent>
+            </Card>
+
+            <Card className="glass overflow-hidden hover:scale-105 transition-smooth">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/b46240a3-bb5f-4bd4-9369-cece8c193267.png" 
+                  alt="Michael - Ukraine Community Leader"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <CardContent className="p-4 text-center">
+                <div className="font-semibold">Michael</div>
+                <div className="text-sm text-foreground/60">Ukraine No.1 Leader</div>
               </CardContent>
             </Card>
           </div>
