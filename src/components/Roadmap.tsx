@@ -102,69 +102,17 @@ export const Roadmap = () => {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-foreground/20 hidden lg:block"></div>
-
-          <div className="space-y-12">
-            {phases.map((phase, index) => {
-              const StatusIcon = getStatusIcon(phase.status, phase.icon);
-              const isLeft = index % 2 === 0;
-              
-              return (
-                <div key={index} className="relative">
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background hidden lg:block z-10"></div>
-                  
-                  <div className={`grid lg:grid-cols-2 gap-8 items-center ${!isLeft ? 'lg:grid-flow-col-dense' : ''}`}>
-                    {/* Content */}
-                    <Card className={`glass ${phase.status === 'current' ? 'border-primary/30 glow-green' : ''} ${!isLeft ? 'lg:col-start-2' : ''}`}>
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-2">
-                          <StatusIcon className={`w-6 h-6 ${
-                            phase.status === 'completed' ? 'text-green-400' :
-                            phase.status === 'current' ? 'text-primary' : 'text-foreground/60'
-                          }`} />
-                          <Badge variant="secondary" className={getStatusColor(phase.status)}>
-                            {phase.timeframe}
-                          </Badge>
-                        </div>
-                        <CardTitle className="text-xl">
-                          {phase.phase}: {phase.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-3">
-                          {phase.milestones.map((milestone, idx) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                                phase.status === 'completed' ? 'bg-green-400' :
-                                phase.status === 'current' ? 'bg-primary' : 'bg-foreground/40'
-                              }`}></div>
-                              <span className="text-sm text-foreground/80">{milestone}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-
-                    {/* Visual placeholder */}
-                    <div className={`hidden lg:block ${isLeft ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
-                      <div className="w-full h-40 glass rounded-lg flex items-center justify-center">
-                        <div className="text-center">
-                          <StatusIcon className={`w-16 h-16 mx-auto mb-2 ${
-                            phase.status === 'completed' ? 'text-green-400' :
-                            phase.status === 'current' ? 'text-primary' : 'text-foreground/60'
-                          }`} />
-                          <p className="text-sm text-foreground/60">{phase.phase}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        {/* Official Roadmap Image */}
+        <div className="mb-16">
+          <Card className="glass overflow-hidden">
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/bd606c5b-c261-4404-a21e-7ba8a600d03b.png"
+                alt="UniLive Future Development Plan - Roadmap from 2024 Q1-Q3 through 2026 Q3-Q4 with detailed milestones including Industry Analysis, Ecological Expansion, Global Expansion, and Web2&Web3 capitolize operation"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
