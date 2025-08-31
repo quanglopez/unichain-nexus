@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, TrendingUp, Star, CheckCircle, Users, Globe } from "lucide-react";
-import heroImage from "@/assets/hero-trading.jpg";
+import heroImage from "@/assets/hero-unilive-global.png";
 export const Hero = () => {
   return <section id="hero" className="min-h-screen flex items-center justify-center pt-20 sm:pt-16 px-3 sm:px-4 relative overflow-hidden">
       {/* Background grid effect */}
@@ -76,7 +76,7 @@ export const Hero = () => {
         {/* Right content - Hero image */}
         <div className="relative">
           <div className="glass rounded-2xl p-4 glow-green">
-            <img src={heroImage} alt="UniLive × UniMex Trading Interface" className="w-full h-auto rounded-xl" />
+            <img src={heroImage} alt="UniLive Global Community - Local Touch, Global Reach" className="w-full h-auto rounded-xl" />
           </div>
           
           {/* Floating elements */}
