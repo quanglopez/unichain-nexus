@@ -64,7 +64,7 @@ export const Navigation = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 glass border-b border-white/10">
-            <div className="px-3 pt-3 pb-4 space-y-2 max-h-screen overflow-y-auto">
+            <div className="px-3 pt-3 pb-4 space-y-2 max-h-screen overflow-y-auto bg-black">
               {navItems.map((item) => (
                 <a
                   key={item.label}
