@@ -124,6 +124,32 @@ export const Team = () => {
           </Card>
         </div>
 
+        {/* UniLive Partnerships */}
+        <div className="mb-12 space-y-8">
+          <Card className="glass overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-center">Strategic Partnerships & Collaborations</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/96b7f7ff-bd59-46dd-89fe-066241052d5f.png"
+                alt="UniLive Strategic Partnerships - ROOTDATA, Endless, GBox, APRO, Genpharmchain, REI, GDP, ESCC, ccarbon, Neutron, shibamini, PredX, FIREVERSE, KRANCH, EMC HUB PARTNERS, MiniFlix"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
+
+          <Card className="glass overflow-hidden">
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/3880bd3e-679f-4cdc-9669-a799f7379949.png"
+                alt="UniLive Partnership Announcements - MetaSpaceX, HAJYO, Wang, TradingBase, Unkomon, AIRDAO, CADUCEUS, EMC HUB, STRATOS, UTK, Ner3, Nixa Global"
+                className="w-full h-auto"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Partners & Investors */}
         <div className="space-y-12">
           <Card className="glass">
