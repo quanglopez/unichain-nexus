@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, TrendingUp, Star, CheckCircle, Users, Globe } from "lucide-react";
-import heroImage from "@/assets/hero-unilive-global.png";
+const heroImage = "/lovable-uploads/297c370f-d3f9-48b1-aec2-e4523fbf348e.png";
+
 export const Hero = () => {
-  return <section id="hero" className="min-h-screen flex items-center justify-center pt-20 sm:pt-16 px-3 sm:px-4 relative overflow-hidden">
+  return (
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 sm:pt-16 px-3 sm:px-4 relative overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 grid-bg opacity-30"></div>
       
@@ -44,19 +46,34 @@ export const Hero = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-            <Button variant="hero" size="lg" className="group" asChild>
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group"
+              asChild
+            >
               <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Download UniLive App
               </a>
             </Button>
-            <Button variant="neon" size="lg" className="group" asChild>
+            <Button 
+              variant="neon" 
+              size="lg" 
+              className="group"
+              asChild
+            >
               <a href="https://drive.google.com/drive/folders/1C1oRLIgsky_7hOjA1npcpW7HF8_QjiMx?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <TrendingUp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Explore UniMex
               </a>
             </Button>
-            <Button variant="ghost" size="lg" className="text-foreground/80" asChild>
+            <Button 
+              variant="ghost" 
+              size="lg" 
+              className="text-foreground/80"
+              asChild
+            >
               <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
                 <Star className="w-5 h-5 mr-2" />
                 Join Cornerstone
@@ -66,17 +83,28 @@ export const Hero = () => {
 
           {/* Value proposition */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 sm:pt-8 justify-center lg:justify-start">
-            {["Transparent", "Interactive", "Fast Liquidity", "Multiple Revenue"].map(item => <div key={item} className="text-center lg:text-left">
+            {[
+              "Transparent",
+              "Interactive", 
+              "Fast Liquidity",
+              "Multiple Revenue"
+            ].map((item) => (
+              <div key={item} className="text-center lg:text-left">
                 <div className="w-2 h-2 bg-primary rounded-full mx-auto lg:mx-0 mb-2 glow-green"></div>
                 <span className="text-xs sm:text-sm font-medium text-foreground/80">{item}</span>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Right content - Hero image */}
         <div className="relative">
           <div className="glass rounded-2xl p-4 glow-green">
-            <img src={heroImage} alt="UniLive Global Community - Local Touch, Global Reach" className="w-full h-auto rounded-xl" />
+            <img 
+              src={heroImage} 
+              alt="UniLive Global Community - Local Touch, Global Reach" 
+              className="w-full h-auto rounded-xl"
+            />
           </div>
           
           {/* Floating elements */}
@@ -85,10 +113,11 @@ export const Hero = () => {
           </div>
           
           <div className="absolute -bottom-4 -left-4 glass rounded-lg p-3">
-            <div className="text-xs font-semibold text-foreground">Unilive</div>
-            <div className="text-primary text-sm">Global</div>
+            <div className="text-xs font-semibold text-foreground">UNX Trading</div>
+            <div className="text-primary text-sm">+24.5%</div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
