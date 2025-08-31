@@ -149,58 +149,6 @@ export const Features = () => {
           </div>
         </div>
 
-        {/* Comparison Table for ILO vs IEO/IDO */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8">
-            <span className="text-primary">ILO</span> vs Traditional Token Launches
-          </h3>
-          
-          <Card className="glass">
-            <CardContent className="p-0">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="text-left p-4 font-semibold">Feature</th>
-                      <th className="text-center p-4 font-semibold text-primary">ILO (UniLive)</th>
-                      <th className="text-center p-4 font-semibold text-foreground/60">IEO/IDO</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        feature: "Transparency",
-                        ilo: "Live Q&A, real-time interaction",
-                        traditional: "Limited documentation"
-                      },
-                      {
-                        feature: "Community Building",
-                        ilo: "Active engagement during launch",
-                        traditional: "Post-launch community efforts"
-                      },
-                      {
-                        feature: "Trust Factor",
-                        ilo: "Direct creator interaction",
-                        traditional: "Platform-mediated trust"
-                      },
-                      {
-                        feature: "Accessibility",
-                        ilo: "Global livestream audience",
-                        traditional: "Platform restrictions"
-                      }
-                    ].map((row, index) => (
-                      <tr key={index} className="border-b border-white/5 hover:bg-white/5">
-                        <td className="p-4 font-medium">{row.feature}</td>
-                        <td className="p-4 text-center text-primary">{row.ilo}</td>
-                        <td className="p-4 text-center text-foreground/60">{row.traditional}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
