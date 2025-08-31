@@ -50,9 +50,11 @@ export const Footer = () => {
 
           {/* Floating Contact Links */}
           <div className="flex justify-center gap-4 mb-12">
-            <Button variant="glass" size="sm" className="rounded-full">
-              <Send className="w-4 h-4 mr-2" />
-              Telegram
+            <Button variant="glass" size="sm" className="rounded-full" asChild>
+              <a href="https://t.me/worldtradingfund" target="_blank" rel="noopener noreferrer">
+                <Send className="w-4 h-4 mr-2" />
+                Telegram
+              </a>
             </Button>
             <Button variant="glass" size="sm" className="rounded-full">
               <MessageCircle className="w-4 h-4 mr-2" />
