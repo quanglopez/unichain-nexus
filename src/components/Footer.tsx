@@ -25,13 +25,26 @@ export const Footer = () => {
               <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
               Download UniLive App
             </Button>
-            <Button variant="neon" size="lg" className="group">
-              <TrendingUp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Explore UniMex
+            <Button 
+              variant="neon" 
+              size="lg" 
+              className="group"
+              asChild
+            >
+              <a href="https://drive.google.com/drive/folders/1C1oRLIgsky_7hOjA1npcpW7HF8_QjiMx?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <TrendingUp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Explore UniMex
+              </a>
             </Button>
-            <Button variant="ghost" size="lg">
-              <FileText className="w-5 h-5 mr-2" />
-              Get the Project PDF
+            <Button 
+              variant="ghost" 
+              size="lg"
+              asChild
+            >
+              <a href="https://drive.google.com/drive/folders/1C1oRLIgsky_7hOjA1npcpW7HF8_QjiMx?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <FileText className="w-5 h-5 mr-2" />
+                Get the Project PDF
+              </a>
             </Button>
           </div>
 

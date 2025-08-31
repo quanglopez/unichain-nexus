@@ -16,9 +16,16 @@ export const StickyActions = () => {
             Download UniLive
           </a>
         </Button>
-        <Button variant="neon" size="sm" className="rounded-full">
-          <TrendingUp className="w-4 h-4" />
-          Explore UniMex
+        <Button 
+          variant="neon" 
+          size="sm" 
+          className="rounded-full"
+          asChild
+        >
+          <a href="https://drive.google.com/drive/folders/1C1oRLIgsky_7hOjA1npcpW7HF8_QjiMx?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <TrendingUp className="w-4 h-4" />
+            Explore UniMex
+          </a>
         </Button>
         <Button 
           variant="glass" 
