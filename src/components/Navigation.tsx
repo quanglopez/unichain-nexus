@@ -9,7 +9,7 @@ export const Navigation = () => {
   const navItems = [
     { label: "Home", href: "#hero" },
     { label: "Why UniLive × UniMex", href: "#why-us" },
-    { label: "Features", href: "#features" },
+    
     { label: "UNX Token", href: "#unx-token" },
     { label: "Cornerstone", href: "#cornerstone" },
     
