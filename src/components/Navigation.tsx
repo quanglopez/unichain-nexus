@@ -64,12 +64,12 @@ export const Navigation = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 glass border-b border-white/10">
-            <div className="px-3 pt-3 pb-4 space-y-2 max-h-screen overflow-y-auto bg-black">
+            <div className="px-3 pt-3 pb-4 space-y-2 max-h-screen overflow-y-auto">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary bg-black rounded-lg transition-smooth"
+                  className="block px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-white/5 rounded-lg transition-smooth"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
