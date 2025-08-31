@@ -4,6 +4,7 @@ import { ProblemSolution } from "@/components/ProblemSolution";
 import { Features } from "@/components/Features";
 import { WhyUs } from "@/components/WhyUs";
 import { UNXToken } from "@/components/UNXToken";
+import { InvestmentForm } from "@/components/InvestmentForm";
 import { Cornerstone } from "@/components/Cornerstone";
 import { Team } from "@/components/Team";
 import { Roadmap } from "@/components/Roadmap";
@@ -20,6 +21,7 @@ const Index = () => {
       <Features />
       <WhyUs />
       <UNXToken />
+      <InvestmentForm />
       <Cornerstone />
       <Team />
       <Roadmap />

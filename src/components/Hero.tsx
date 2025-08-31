@@ -46,17 +46,31 @@ export const Hero = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="group">
-              <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Download UniLive App
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group"
+              asChild
+            >
+              <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
+                <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Download UniLive App
+              </a>
             </Button>
             <Button variant="neon" size="lg" className="group">
               <TrendingUp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
               Explore UniMex
             </Button>
-            <Button variant="ghost" size="lg" className="text-foreground/80">
-              <Star className="w-5 h-5 mr-2" />
-              Join Cornerstone
+            <Button 
+              variant="ghost" 
+              size="lg" 
+              className="text-foreground/80"
+              asChild
+            >
+              <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
+                <Star className="w-5 h-5 mr-2" />
+                Join Cornerstone
+              </a>
             </Button>
           </div>
 

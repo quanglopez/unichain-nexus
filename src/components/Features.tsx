@@ -102,6 +102,53 @@ export const Features = () => {
           })}
         </div>
 
+        {/* YouTube Videos Section */}
+        <div className="mt-16 space-y-12">
+          <h3 className="text-2xl font-bold text-center mb-8">
+            Watch UniLive × UniMex in Action
+          </h3>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Presentation Video */}
+            <Card className="glass">
+              <CardHeader>
+                <CardTitle className="text-lg">Presentation of UniLive and UniMex</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/9V-CtfulQqs"
+                    title="Presentation of UniLive and UniMex"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Global Livestream Preview Video */}
+            <Card className="glass">
+              <CardHeader>
+                <CardTitle className="text-lg">UniLive UniMex Global Livestream Preview</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/-dmDMB-CoKo"
+                    title="UniLive UniMex Global Livestream Preview"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* Comparison Table for ILO vs IEO/IDO */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">
