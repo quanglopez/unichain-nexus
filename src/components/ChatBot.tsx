@@ -100,16 +100,16 @@ const ChatBot = () => {
     return (
       <Button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg"
+        className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 h-12 w-12 sm:h-14 sm:w-14 rounded-full shadow-lg"
         size="icon"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
       </Button>
     );
   }
 
   return (
-    <Card className="fixed bottom-6 right-6 z-50 w-96 h-[500px] shadow-2xl">
+    <Card className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 w-80 sm:w-96 h-96 sm:h-[500px] shadow-2xl">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
         <div className="flex items-center space-x-2">
           <Bot className="h-5 w-5 text-primary" />

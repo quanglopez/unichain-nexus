@@ -5,13 +5,13 @@ import heroImage from "@/assets/hero-trading.jpg";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 sm:pt-16 px-3 sm:px-4 relative overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 grid-bg opacity-30"></div>
       
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left content */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
           {/* Social proof badges */}
           <div className="flex flex-wrap gap-3">
             <Badge variant="secondary" className="glass">
@@ -30,22 +30,22 @@ export const Hero = () => {
 
           {/* Main heading */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="text-glow">UniLive × UniMex</span>
               <br />
-              <span className="text-foreground/90">The Interactive Trading & Live‑Launchpad Hub for</span>
+              <span className="text-foreground/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">The Interactive Trading & Live‑Launchpad Hub for</span>
               <br />
               <span className="bg-gradient-neon bg-clip-text text-transparent">Web3</span>
             </h1>
           </div>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed mx-auto lg:mx-0">
             Turn content → liquidity → value: launch tokens via livestream (ILO), trade interactively with one‑click access, and unlock utilities by holding UNX.
           </p>
 
           {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <Button 
               variant="hero" 
               size="lg" 
@@ -82,16 +82,16 @@ export const Hero = () => {
           </div>
 
           {/* Value proposition */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 sm:pt-8 justify-center lg:justify-start">
             {[
               "Transparent",
               "Interactive", 
               "Fast Liquidity",
               "Multiple Revenue"
             ].map((item) => (
-              <div key={item} className="text-center">
-                <div className="w-2 h-2 bg-primary rounded-full mx-auto mb-2 glow-green"></div>
-                <span className="text-sm font-medium text-foreground/80">{item}</span>
+              <div key={item} className="text-center lg:text-left">
+                <div className="w-2 h-2 bg-primary rounded-full mx-auto lg:mx-0 mb-2 glow-green"></div>
+                <span className="text-xs sm:text-sm font-medium text-foreground/80">{item}</span>
               </div>
             ))}
           </div>

@@ -3,10 +3,10 @@ import { AlertTriangle, CheckCircle, Video, TrendingUp, Link } from "lucide-reac
 
 export const ProblemSolution = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             From <span className="text-destructive">Fragmented Web3</span> to{" "}
             <span className="text-glow">Unified Ecosystem</span>
           </h2>

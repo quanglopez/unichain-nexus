@@ -12,7 +12,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="py-20 px-4 bg-gradient-dark border-t border-white/10">
+    <footer id="contact" className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 bg-gradient-dark border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         {/* Lead Capture CTAs */}
         <div className="text-center mb-16">

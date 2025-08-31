@@ -89,10 +89,10 @@ export const Roadmap = () => {
   };
 
   return (
-    <section id="roadmap" className="py-20 px-4 bg-gradient-dark">
+    <section id="roadmap" className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 bg-gradient-dark">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             <span className="text-glow">Development Roadmap</span>
             <br />
             <span className="text-foreground/80">Our Journey to Web3 Excellence</span>
