@@ -6,6 +6,7 @@ import { WhyUs } from "@/components/WhyUs";
 import { UNXToken } from "@/components/UNXToken";
 import { InvestmentForm } from "@/components/InvestmentForm";
 import { BusinessPresentation } from "@/components/BusinessPresentation";
+import { UniLiveEvents } from "@/components/UniLiveEvents";
 import { Cornerstone } from "@/components/Cornerstone";
 import { Team } from "@/components/Team";
 import { Roadmap } from "@/components/Roadmap";
@@ -24,6 +25,7 @@ const Index = () => {
       <UNXToken />
       <InvestmentForm />
       <BusinessPresentation />
+      <UniLiveEvents />
       <Cornerstone />
       <Team />
       <Roadmap />
