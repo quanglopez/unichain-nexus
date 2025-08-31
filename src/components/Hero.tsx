@@ -29,7 +29,7 @@ export const Hero = () => {
           {/* Main heading */}
           <div className="space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="text-glow">UniLive × UniMex</span>
+              <span className="text-glow">Unilive × UniMex</span>
               <br />
               <span className="text-foreground/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">The Interactive Trading & Live‑Launchpad Hub for</span>
               <br />
@@ -47,7 +47,7 @@ export const Hero = () => {
             <Button variant="hero" size="lg" className="group" asChild>
               <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Download UniLive App
+                Download Unilive App
               </a>
             </Button>
             <Button variant="neon" size="lg" className="group" asChild>
@@ -76,7 +76,7 @@ export const Hero = () => {
         {/* Right content - Hero image */}
         <div className="relative">
           <div className="glass rounded-2xl p-4 glow-green">
-            <img src={heroImage} alt="UniLive Global Community - Local Touch, Global Reach" className="w-full h-auto rounded-xl" />
+            <img src={heroImage} alt="Unilive Global Community - Local Touch, Global Reach" className="w-full h-auto rounded-xl" />
           </div>
           
           {/* Floating elements */}
