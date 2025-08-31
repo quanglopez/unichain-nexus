@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+				'manrope': ['Manrope', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom Web3 colors
+				'neon-green': 'hsl(var(--neon-green))',
+				'dark-graphite': 'hsl(var(--dark-graphite))',
+				'medium-graphite': 'hsl(var(--medium-graphite))',
+				'light-graphite': 'hsl(var(--light-graphite))',
+				'glass-white': 'hsl(var(--glass-white))',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-dark': 'var(--gradient-dark)',
+				'gradient-glass': 'var(--gradient-glass)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'grid-pattern': 'var(--grid-pattern)',
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'glass': 'var(--shadow-glass)',
+				'card-custom': 'var(--shadow-card)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

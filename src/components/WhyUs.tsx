@@ -1,0 +1,113 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, Repeat, Layers, Code } from "lucide-react";
+
+export const WhyUs = () => {
+  const differentiators = [
+    {
+      icon: Repeat,
+      title: "Trading as Ecosystem",
+      description: "Tightly connects social, gaming, and trading for a capital-efficiency flywheel",
+      benefits: ["Unified user experience", "Cross-platform synergy", "Enhanced capital flow"]
+    },
+    {
+      icon: Layers,
+      title: "Liquidity-as-a-Service (LaaS)",
+      description: "Plug-and-play liquidity infrastructure for cross-chain asset circulation",
+      benefits: ["Easy integration", "Cross-chain support", "Instant liquidity"]
+    },
+    {
+      icon: Code,
+      title: "Embedded Financial Protocols",
+      description: "Developer-friendly liquidity tools and earn-by-holding mechanics",
+      benefits: ["Developer tools", "Yield generation", "Protocol integration"]
+    }
+  ];
+
+  return (
+    <section id="why-us" className="py-20 px-4 bg-gradient-dark">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Why <span className="text-glow">UniLive × UniMex</span>?
+          </h2>
+          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+            Three core innovations that set us apart in the Web3 ecosystem
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {differentiators.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <Card key={index} className="glass group hover:glow-green transition-smooth">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <IconComponent className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/80 mb-4">{item.description}</p>
+                  <ul className="space-y-2">
+                    {item.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm text-foreground/70">
+                        <ArrowRight className="w-4 h-4 text-primary flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Value Feedback Loop Diagram */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold mb-8">Value Feedback Loop</h3>
+          
+          <Card className="glass max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-4 gap-6 items-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-2xl">🎬</span>
+                  </div>
+                  <h4 className="font-semibold mb-1">Content Creation</h4>
+                  <p className="text-xs text-foreground/70">Livestreams & ILOs</p>
+                </div>
+                
+                <ArrowRight className="w-6 h-6 text-primary mx-auto hidden md:block" />
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-2xl">💰</span>
+                  </div>
+                  <h4 className="font-semibold mb-1">Trading Activity</h4>
+                  <p className="text-xs text-foreground/70">UniMex Platform</p>
+                </div>
+                
+                <ArrowRight className="w-6 h-6 text-primary mx-auto hidden md:block" />
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-2xl">🔄</span>
+                  </div>
+                  <h4 className="font-semibold mb-1">Fee Distribution</h4>
+                  <p className="text-xs text-foreground/70">Back to Ecosystem</p>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-primary/10 rounded-lg">
+                <p className="text-sm text-center text-foreground/80">
+                  A share of trading fees flows back through the ecosystem to reinforce participation, 
+                  creating a sustainable flywheel of value creation and distribution.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};

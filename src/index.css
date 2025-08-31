@@ -8,35 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark graphite base with neon green accents */
+    --background: 220 8% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 10% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 10% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 220 8% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 8% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 8% 15%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 84% 47%;
+    --accent-foreground: 220 8% 8%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 8% 20%;
+    --input: 220 8% 15%;
+    --ring: 142 76% 36%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Web3 color palette */
+    --neon-green: 142 84% 47%;
+    --neon-green-glow: 142 84% 47%;
+    --dark-graphite: 220 8% 8%;
+    --medium-graphite: 220 8% 15%;
+    --light-graphite: 220 8% 20%;
+    --glass-white: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 84% 47%), hsl(142 76% 36%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 8% 8%), hsl(220 8% 12%));
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-neon: linear-gradient(90deg, hsl(142 84% 47%), hsl(170 84% 47%));
+    
+    /* Shadows and glows */
+    --shadow-glow: 0 0 40px hsl(142 84% 47% / 0.3);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
+    
+    /* Grid pattern */
+    --grid-pattern: radial-gradient(circle at 2px 2px, hsl(142 84% 47% / 0.15) 1px, transparent 0);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +127,39 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    background-image: var(--grid-pattern);
+    background-size: 40px 40px;
+  }
+  
+  /* Glass morphism effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Neon glow effects */
+  .glow-green {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsl(142 84% 47% / 0.5);
+  }
+  
+  /* Grid background overlay */
+  .grid-bg {
+    background-image: var(--grid-pattern);
+    background-size: 40px 40px;
+  }
+  
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-glow {
+    transition: var(--transition-glow);
   }
 }

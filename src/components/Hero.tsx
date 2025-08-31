@@ -1,0 +1,102 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Download, TrendingUp, Star, CheckCircle, Users, Globe } from "lucide-react";
+import heroImage from "@/assets/hero-trading.jpg";
+
+export const Hero = () => {
+  return (
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+      {/* Background grid effect */}
+      <div className="absolute inset-0 grid-bg opacity-30"></div>
+      
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Left content */}
+        <div className="space-y-8">
+          {/* Social proof badges */}
+          <div className="flex flex-wrap gap-3">
+            <Badge variant="secondary" className="glass">
+              <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+              Experienced Team
+            </Badge>
+            <Badge variant="secondary" className="glass">
+              <Users className="w-4 h-4 mr-2 text-primary" />
+              Global Partners
+            </Badge>
+            <Badge variant="secondary" className="glass">
+              <Globe className="w-4 h-4 mr-2 text-primary" />
+              Ecosystem Coverage
+            </Badge>
+          </div>
+
+          {/* Main heading */}
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span className="text-glow">UniLive × UniMex</span>
+              <br />
+              <span className="text-foreground/90">The Interactive Trading & Live‑Launchpad Hub for</span>
+              <br />
+              <span className="bg-gradient-neon bg-clip-text text-transparent">Web3</span>
+            </h1>
+          </div>
+
+          {/* Subheading */}
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed">
+            Turn content → liquidity → value: launch tokens via livestream (ILO), trade interactively with one‑click access, and unlock utilities by holding UNX.
+          </p>
+
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button variant="hero" size="lg" className="group">
+              <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              Download UniLive App
+            </Button>
+            <Button variant="neon" size="lg" className="group">
+              <TrendingUp className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              Explore UniMex
+            </Button>
+            <Button variant="ghost" size="lg" className="text-foreground/80">
+              <Star className="w-5 h-5 mr-2" />
+              Join Cornerstone
+            </Button>
+          </div>
+
+          {/* Value proposition */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+            {[
+              "Transparent",
+              "Interactive", 
+              "Fast Liquidity",
+              "Multiple Revenue"
+            ].map((item) => (
+              <div key={item} className="text-center">
+                <div className="w-2 h-2 bg-primary rounded-full mx-auto mb-2 glow-green"></div>
+                <span className="text-sm font-medium text-foreground/80">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right content - Hero image */}
+        <div className="relative">
+          <div className="glass rounded-2xl p-4 glow-green">
+            <img 
+              src={heroImage} 
+              alt="UniLive × UniMex Trading Interface" 
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+          
+          {/* Floating elements */}
+          <div className="absolute -top-4 -right-4 glass rounded-lg p-3 animate-pulse">
+            <div className="text-xs font-semibold text-primary">ILO LIVE</div>
+          </div>
+          
+          <div className="absolute -bottom-4 -left-4 glass rounded-lg p-3">
+            <div className="text-xs font-semibold text-foreground">UNX Trading</div>
+            <div className="text-primary text-sm">+24.5%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
