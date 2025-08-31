@@ -147,24 +147,19 @@ export const Team = () => {
           </Card>
 
           {/* Global Expansion */}
-          <Card className="glass">
+          <Card className="glass overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-center">Global Expansion & Community</CardTitle>
+              <CardTitle className="text-center flex items-center justify-center gap-3">
+                <Globe className="w-6 h-6 text-primary" />
+                Global Expansion & Community
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  "🌏 Asia-Pacific Hub",
-                  "🌍 European Expansion", 
-                  "🌎 Americas Growth",
-                  "🚀 Community Campaigns"
-                ].map((item, index) => (
-                  <div key={index} className="text-center p-4 bg-secondary/20 rounded-lg">
-                    <div className="text-2xl mb-2">{item.split(' ')[0]}</div>
-                    <div className="text-sm font-medium">{item.split(' ').slice(1).join(' ')}</div>
-                  </div>
-                ))}
-              </div>
+            <CardContent className="p-0">
+              <img 
+                src="/lovable-uploads/9440da35-b36f-4328-bd08-28f7ea8bae86.png"
+                alt="UniLive Global Expansion - Worldwide presence in China, Japan, Korea, United States, Vietnam, Thailand, Malaysia, Indonesia, Singapore, Europe, Dubai, Africa, Brazil and more"
+                className="w-full h-auto"
+              />
             </CardContent>
           </Card>
         </div>
