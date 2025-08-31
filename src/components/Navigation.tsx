@@ -69,7 +69,7 @@ export const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-white/5 rounded-lg transition-smooth"
+                  className="block px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary bg-black rounded-lg transition-smooth"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
