@@ -145,7 +145,7 @@ export const BusinessPresentation = () => {
                 <img 
                   src="/lovable-uploads/5ec055a1-41bb-4723-ad05-5b95267263dd.png" 
                   alt="Mr Jason - Europe Community Founder"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover object-center"
                 />
               </div>
               <CardContent className="p-4 text-center">
