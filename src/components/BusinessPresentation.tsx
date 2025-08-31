@@ -37,7 +37,7 @@ export const BusinessPresentation = () => {
           {/* Presentation Image */}
           <div className="relative">
             <img 
-              src="/business-presentation.png" 
+              src="/lovable-uploads/de56cef6-e386-404f-bf45-2df0d37c96c1.png" 
               alt="UniMex Business Presentation featuring Mr Hunter and Mr Michael"
               className="w-full rounded-xl shadow-elegant"
             />
