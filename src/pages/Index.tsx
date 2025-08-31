@@ -9,7 +9,7 @@ import { BusinessPresentation } from "@/components/BusinessPresentation";
 import { UniLiveEvents } from "@/components/UniLiveEvents";
 import AppInterface from "@/components/AppInterface";
 import { Cornerstone } from "@/components/Cornerstone";
-import { Team } from "@/components/Team";
+
 import { Roadmap } from "@/components/Roadmap";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
@@ -30,7 +30,7 @@ const Index = () => {
       <AppInterface />
       <UniLiveEvents />
       <Cornerstone />
-      <Team />
+      
       <Roadmap />
       <FAQ />
       <Footer />

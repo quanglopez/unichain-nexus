@@ -12,7 +12,7 @@ export const Navigation = () => {
     { label: "Features", href: "#features" },
     { label: "UNX Token", href: "#unx-token" },
     { label: "Cornerstone", href: "#cornerstone" },
-    { label: "Team & Partners", href: "#team" },
+    
     { label: "Roadmap", href: "#roadmap" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
