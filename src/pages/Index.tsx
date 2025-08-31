@@ -14,6 +14,7 @@ import { Roadmap } from "@/components/Roadmap";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { StickyActions } from "@/components/StickyActions";
+import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
@@ -34,6 +35,7 @@ const Index = () => {
       <FAQ />
       <Footer />
       <StickyActions />
+      <ChatBot />
     </div>
   );
 };
