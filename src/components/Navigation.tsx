@@ -43,8 +43,10 @@ export const Navigation = () => {
           {/* Right side */}
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageToggle />
-            <Button variant="neon" size="sm">
-              Join Cornerstone
+            <Button variant="neon" size="sm" asChild>
+              <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
+                Join Cornerstone
+              </a>
             </Button>
           </div>
 
@@ -76,8 +78,10 @@ export const Navigation = () => {
                 </a>
               ))}
               <div className="px-4 py-3">
-                <Button variant="neon" size="sm" className="w-full">
-                  Join Cornerstone
+                <Button variant="neon" size="sm" className="w-full" asChild>
+                  <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
+                    Join Cornerstone
+                  </a>
                 </Button>
               </div>
             </div>

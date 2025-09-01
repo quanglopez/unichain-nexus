@@ -175,9 +175,11 @@ export const Cornerstone = () => {
               </p>
             </div>
             
-            <Button variant="hero" size="lg" className="w-full">
-              <TrendingUp className="w-5 h-5 mr-2" />
-              Submit Application
+            <Button variant="hero" size="lg" className="w-full" asChild>
+              <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                Submit Application
+              </a>
             </Button>
           </CardContent>
         </Card>
