@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 import { 
   Shield, 
   Star, 
@@ -18,70 +16,6 @@ import {
 } from "lucide-react";
 
 export const Cornerstone = () => {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    telegram: "",
-    country: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email) {
-      toast({
-        title: "Error",
-        description: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-    
-    try {
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/22034519/uhe20id/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          type: "cornerstone_application",
-          fullName: formData.name,
-          email: formData.email,
-          telegram: formData.telegram,
-          country: formData.country,
-          timestamp: new Date().toISOString(),
-          source: window.location.origin,
-        }),
-      });
-
-      toast({
-        title: "Application Submitted!",
-        description: "Thank you for applying to the Cornerstone Program. We'll review your application and contact you soon.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        telegram: "",
-        country: ""
-      });
-    } catch (error) {
-      console.error("Error submitting application:", error);
-      toast({
-        title: "Error",
-        description: "Failed to submit application. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
   const tiers = [
     {
       icon: Star,
@@ -211,71 +145,42 @@ export const Cornerstone = () => {
               Apply to Cornerstone Program
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input 
-                    id="name" 
-                    placeholder="Enter your full name" 
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="your.email@example.com" 
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    required
-                  />
-                </div>
+          <CardContent className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" placeholder="Enter your full name" />
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="telegram">Telegram Username</Label>
-                  <Input 
-                    id="telegram" 
-                    placeholder="@yourusername" 
-                    value={formData.telegram}
-                    onChange={(e) => setFormData({...formData, telegram: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="country">Country</Label>
-                  <Input 
-                    id="country" 
-                    placeholder="Your country" 
-                    value={formData.country}
-                    onChange={(e) => setFormData({...formData, country: e.target.value})}
-                  />
-                </div>
+              <div>
+                <Label htmlFor="email">Email Address</Label>
+                <Input id="email" type="email" placeholder="your.email@example.com" />
               </div>
-              
-              <div className="p-4 bg-secondary/20 rounded-lg">
-                <p className="text-sm text-foreground/80">
-                  <strong>Note:</strong> KYC verification and compliance checks will be required. 
-                  Please ensure you meet all regulatory requirements in your jurisdiction.
-                </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="telegram">Telegram Username</Label>
+                <Input id="telegram" placeholder="@yourusername" />
               </div>
-              
-              <Button 
-                type="submit" 
-                variant="hero" 
-                size="lg" 
-                className="w-full" 
-                disabled={isLoading}
-              >
+              <div>
+                <Label htmlFor="country">Country</Label>
+                <Input id="country" placeholder="Your country" />
+              </div>
+            </div>
+            
+            <div className="p-4 bg-secondary/20 rounded-lg">
+              <p className="text-sm text-foreground/80">
+                <strong>Note:</strong> KYC verification and compliance checks will be required. 
+                Please ensure you meet all regulatory requirements in your jurisdiction.
+              </p>
+            </div>
+            
+            <Button variant="hero" size="lg" className="w-full" asChild>
+              <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
                 <TrendingUp className="w-5 h-5 mr-2" />
-                {isLoading ? "Submitting..." : "Submit Application"}
-              </Button>
-            </form>
+                Submit Application
+              </a>
+            </Button>
           </CardContent>
         </Card>
       </div>

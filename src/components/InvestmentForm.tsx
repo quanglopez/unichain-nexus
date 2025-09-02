@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 import { 
   TrendingUp, 
   DollarSign, 
@@ -14,68 +12,7 @@ import {
 } from "lucide-react";
 
 export const InvestmentForm = () => {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    investmentInterest: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.fullName || !formData.email) {
-      toast({
-        title: "Error",
-        description: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-    
-    try {
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/22034519/uhe20id/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          type: "investment_registration",
-          fullName: formData.fullName,
-          email: formData.email,
-          investmentInterest: formData.investmentInterest,
-          timestamp: new Date().toISOString(),
-          source: window.location.origin,
-        }),
-      });
-
-      toast({
-        title: "Registration Successful!",
-        description: "Thank you for your interest. We'll contact you soon with exclusive investment information.",
-      });
-      
-      // Reset form
-      setFormData({
-        fullName: "",
-        email: "",
-        investmentInterest: ""
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Error",
-        description: "Failed to submit registration. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+  // Force rebuild to clear cache
   return (
     <section className="py-20 px-4 bg-gradient-dark relative">
       {/* Background decorations */}
@@ -111,57 +48,52 @@ export const InvestmentForm = () => {
             <p className="text-foreground/70 mt-2">Takes only 30 seconds to join!</p>
           </CardHeader>
           
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
-              <div className="space-y-2">
-                <Label htmlFor="fullName" className="text-base font-medium">Full Name *</Label>
-                <Input 
-                  id="fullName" 
-                  placeholder="John Doe" 
-                  className="h-12 text-base border-primary/20 focus:border-primary"
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                  required 
-                />
-              </div>
+          <CardContent className="space-y-6">
+            {/* Name Field */}
+            <div className="space-y-2">
+              <Label htmlFor="fullName" className="text-base font-medium">Full Name *</Label>
+              <Input 
+                id="fullName" 
+                placeholder="John Doe" 
+                className="h-12 text-base border-primary/20 focus:border-primary"
+                required 
+              />
+            </div>
 
-              {/* Email Field - Featured */}
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-base font-medium flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-primary" />
-                  Email *
-                </Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="example@gmail.com" 
-                  className="h-12 text-base border-primary/20 focus:border-primary"
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  required 
-                />
-                <p className="text-xs text-foreground/60">We'll send exclusive information to this email</p>
-              </div>
+            {/* Email Field - Featured */}
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-base font-medium flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                Email *
+              </Label>
+              <Input 
+                id="email" 
+                type="email" 
+                placeholder="example@gmail.com" 
+                className="h-12 text-base border-primary/20 focus:border-primary"
+                required 
+              />
+              <p className="text-xs text-foreground/60">We'll send exclusive information to this email</p>
+            </div>
 
-              {/* Investment Interest */}
-              <div className="space-y-2">
-                <Label htmlFor="investment" className="text-base font-medium flex items-center gap-2">
-                  <DollarSign className="w-4 h-4 text-primary" />
-                  Investment Interest
-                </Label>
-                <Select value={formData.investmentInterest} onValueChange={(value) => setFormData({...formData, investmentInterest: value})}>
-                  <SelectTrigger className="h-12 border-primary/20 focus:border-primary">
-                    <SelectValue placeholder="Select investment range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
-                    <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                    <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
-                    <SelectItem value="500k+">$500,000+</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+            {/* Investment Interest */}
+            <div className="space-y-2">
+              <Label htmlFor="investment" className="text-base font-medium flex items-center gap-2">
+                <DollarSign className="w-4 h-4 text-primary" />
+                Investment Interest
+              </Label>
+              <Select>
+                <SelectTrigger className="h-12 border-primary/20 focus:border-primary">
+                  <SelectValue placeholder="Select investment range" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
+                  <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
+                  <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
+                  <SelectItem value="500k+">$500,000+</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
             {/* Benefits highlight */}
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg border border-primary/20">
@@ -182,23 +114,20 @@ export const InvestmentForm = () => {
               </ul>
             </div>
 
-              {/* Submit Button */}
-              <Button 
-                type="submit"
-                variant="hero" 
-                size="lg" 
-                className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300"
-                disabled={isLoading}
-              >
-                <Sparkles className="w-5 h-5 mr-2" />
-                {isLoading ? "Submitting..." : "Register Now - Free"}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+            {/* Submit Button */}
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <Sparkles className="w-5 h-5 mr-2" />
+              Register Now - Free
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
 
-              <p className="text-xs text-center text-foreground/60 mt-4">
-                By registering, you agree to receive information from UniLive. We respect your privacy.
-              </p>
-            </form>
+            <p className="text-xs text-center text-foreground/60 mt-4">
+              By registering, you agree to receive information from UniLive. We respect your privacy.
+            </p>
           </CardContent>
         </Card>
       </div>
