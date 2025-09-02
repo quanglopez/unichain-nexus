@@ -35,7 +35,7 @@ export const InvestmentForm = () => {
           </h2>
           
           <p className="text-xl text-foreground/80 mb-8">
-            Đăng ký ngay để nhận thông tin đầu tư độc quyền và ưu đãi đặc biệt
+            Register now to receive exclusive investment information and special offers
           </p>
         </div>
 
@@ -43,18 +43,18 @@ export const InvestmentForm = () => {
           <CardHeader className="text-center pb-8">
             <CardTitle className="flex items-center justify-center gap-3 text-2xl">
               <TrendingUp className="w-7 h-7 text-primary" />
-              Đăng Ký Đầu Tư
+              Investment Registration
             </CardTitle>
-            <p className="text-foreground/70 mt-2">Chỉ mất 30 giây để tham gia!</p>
+            <p className="text-foreground/70 mt-2">Takes only 30 seconds to join!</p>
           </CardHeader>
           
           <CardContent className="space-y-6">
             {/* Name Field */}
             <div className="space-y-2">
-              <Label htmlFor="fullName" className="text-base font-medium">Họ và Tên *</Label>
+              <Label htmlFor="fullName" className="text-base font-medium">Full Name *</Label>
               <Input 
                 id="fullName" 
-                placeholder="Nguyễn Văn A" 
+                placeholder="John Doe" 
                 className="h-12 text-base border-primary/20 focus:border-primary"
                 required 
               />
@@ -73,18 +73,18 @@ export const InvestmentForm = () => {
                 className="h-12 text-base border-primary/20 focus:border-primary"
                 required 
               />
-              <p className="text-xs text-foreground/60">Chúng tôi sẽ gửi thông tin độc quyền vào email này</p>
+              <p className="text-xs text-foreground/60">We'll send exclusive information to this email</p>
             </div>
 
             {/* Investment Interest */}
             <div className="space-y-2">
               <Label htmlFor="investment" className="text-base font-medium flex items-center gap-2">
                 <DollarSign className="w-4 h-4 text-primary" />
-                Mức Đầu Tư Quan Tâm
+                Investment Interest
               </Label>
               <Select>
                 <SelectTrigger className="h-12 border-primary/20 focus:border-primary">
-                  <SelectValue placeholder="Chọn mức đầu tư" />
+                  <SelectValue placeholder="Select investment range" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
@@ -97,19 +97,19 @@ export const InvestmentForm = () => {
 
             {/* Benefits highlight */}
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg border border-primary/20">
-              <h4 className="font-semibold mb-3 text-primary">🎁 Quyền lợi độc quyền khi đăng ký:</h4>
+              <h4 className="font-semibold mb-3 text-primary">🎁 Exclusive benefits when you register:</h4>
               <ul className="space-y-2 text-sm text-foreground/80">
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  Thông tin đầu tư sớm nhất
+                  Early access to investment information
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  Giá ưu đãi cho nhà đầu tư tiềm năng
+                  Preferential pricing for potential investors
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  Tư vấn 1-1 từ chuyên gia
+                  1-on-1 consultation with experts
                 </li>
               </ul>
             </div>
@@ -121,12 +121,12 @@ export const InvestmentForm = () => {
               className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Sparkles className="w-5 h-5 mr-2" />
-              Đăng Ký Ngay - Miễn Phí
+              Register Now - Free
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
 
             <p className="text-xs text-center text-foreground/60 mt-4">
-              Bằng cách đăng ký, bạn đồng ý nhận thông tin từ UniLive. Chúng tôi tôn trọng quyền riêng tư của bạn.
+              By registering, you agree to receive information from UniLive. We respect your privacy.
             </p>
           </CardContent>
         </Card>
