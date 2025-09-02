@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 export const InvestmentForm = () => {
+  // Force rebuild to clear cache
   return (
     <section className="py-20 px-4 bg-gradient-dark relative">
       {/* Background decorations */}
