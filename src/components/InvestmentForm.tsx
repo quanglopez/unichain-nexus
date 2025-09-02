@@ -3,213 +3,130 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { 
   TrendingUp, 
   DollarSign, 
-  User, 
   Mail, 
-  Phone, 
-  MapPin,
-  Building,
-  FileText
+  Sparkles,
+  ArrowRight
 } from "lucide-react";
 
 export const InvestmentForm = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-dark">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-glow">Investment Registration</span>
+    <section className="py-20 px-4 bg-gradient-dark relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-2xl mx-auto relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Exclusive Investment Opportunity</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="text-glow">Join UniLive's</span>
             <br />
-            <span className="text-foreground/80">Join UniLive's Growth Journey</span>
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Success Story</span>
           </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Register your interest in UniLive investment opportunities and be part of the future of Web3 trading and live launchpad ecosystem
+          
+          <p className="text-xl text-foreground/80 mb-8">
+            Đăng ký ngay để nhận thông tin đầu tư độc quyền và ưu đãi đặc biệt
           </p>
         </div>
 
-        <Card className="glass">
-          <CardHeader>
-            <CardTitle className="text-center flex items-center justify-center gap-3">
-              <TrendingUp className="w-6 h-6 text-primary" />
-              Investment Registration Form
+        <Card className="glass border-primary/20 shadow-2xl">
+          <CardHeader className="text-center pb-8">
+            <CardTitle className="flex items-center justify-center gap-3 text-2xl">
+              <TrendingUp className="w-7 h-7 text-primary" />
+              Đăng Ký Đầu Tư
             </CardTitle>
+            <p className="text-foreground/70 mt-2">Chỉ mất 30 giây để tham gia!</p>
           </CardHeader>
+          
           <CardContent className="space-y-6">
-            {/* Personal Information */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <User className="w-5 h-5 text-primary" />
-                Personal Information
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" placeholder="Enter your first name" required />
-                </div>
-                <div>
-                  <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" placeholder="Enter your last name" required />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" required />
-                </div>
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
-                </div>
-              </div>
+            {/* Name Field */}
+            <div className="space-y-2">
+              <Label htmlFor="fullName" className="text-base font-medium">Họ và Tên *</Label>
+              <Input 
+                id="fullName" 
+                placeholder="Nguyễn Văn A" 
+                className="h-12 text-base border-primary/20 focus:border-primary"
+                required 
+              />
             </div>
 
-            {/* Location Information */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                Location & Entity Information
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="country">Country/Region *</Label>
-                  <Input id="country" placeholder="Your country" required />
-                </div>
-                <div>
-                  <Label htmlFor="city">City</Label>
-                  <Input id="city" placeholder="Your city" />
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="entityType">Investor Type</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select investor type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="individual">Individual Investor</SelectItem>
-                      <SelectItem value="institutional">Institutional Investor</SelectItem>
-                      <SelectItem value="venture">Venture Capital</SelectItem>
-                      <SelectItem value="fund">Investment Fund</SelectItem>
-                      <SelectItem value="family">Family Office</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="company">Company/Organization</Label>
-                  <Input id="company" placeholder="Company name (if applicable)" />
-                </div>
-              </div>
+            {/* Email Field - Featured */}
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-base font-medium flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                Email *
+              </Label>
+              <Input 
+                id="email" 
+                type="email" 
+                placeholder="example@gmail.com" 
+                className="h-12 text-base border-primary/20 focus:border-primary"
+                required 
+              />
+              <p className="text-xs text-foreground/60">Chúng tôi sẽ gửi thông tin độc quyền vào email này</p>
             </div>
 
-            {/* Investment Details */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-primary" />
-                Investment Interest
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="investmentRange">Investment Range (USD)</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select investment range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
-                      <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                      <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
-                      <SelectItem value="500k-1m">$500,000 - $1,000,000</SelectItem>
-                      <SelectItem value="1m+">$1,000,000+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <Label htmlFor="timeline">Investment Timeline</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select timeline" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="immediate">Immediate (1-3 months)</SelectItem>
-                      <SelectItem value="short">Short-term (3-6 months)</SelectItem>
-                      <SelectItem value="medium">Medium-term (6-12 months)</SelectItem>
-                      <SelectItem value="long">Long-term (12+ months)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="experience">Investment Experience</Label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select your experience level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="beginner">New to Web3/Crypto investments</SelectItem>
-                    <SelectItem value="intermediate">Some experience with crypto investments</SelectItem>
-                    <SelectItem value="experienced">Experienced crypto/Web3 investor</SelectItem>
-                    <SelectItem value="professional">Professional/Institutional investor</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+            {/* Investment Interest */}
+            <div className="space-y-2">
+              <Label htmlFor="investment" className="text-base font-medium flex items-center gap-2">
+                <DollarSign className="w-4 h-4 text-primary" />
+                Mức Đầu Tư Quan Tâm
+              </Label>
+              <Select>
+                <SelectTrigger className="h-12 border-primary/20 focus:border-primary">
+                  <SelectValue placeholder="Chọn mức đầu tư" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="10k-50k">$10,000 - $50,000</SelectItem>
+                  <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
+                  <SelectItem value="100k-500k">$100,000 - $500,000</SelectItem>
+                  <SelectItem value="500k+">$500,000+</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
-            {/* Additional Information */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary" />
-                Additional Information
-              </h3>
-              
-              <div>
-                <Label htmlFor="interests">Specific Areas of Interest</Label>
-                <Textarea 
-                  id="interests" 
-                  placeholder="Tell us about your specific interests in UniLive ecosystem (ILO, trading, UNX token, etc.)"
-                  rows={3}
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="questions">Questions or Comments</Label>
-                <Textarea 
-                  id="questions" 
-                  placeholder="Any questions about UniLive or additional comments you'd like to share"
-                  rows={3}
-                />
-              </div>
-            </div>
-
-            {/* Terms and Disclaimer */}
-            <div className="p-4 bg-secondary/20 rounded-lg space-y-2">
-              <p className="text-sm text-foreground/80">
-                <strong>Important Disclaimer:</strong> This registration form is for informational purposes only and does not constitute an offer to sell or solicitation to buy securities. Any investment opportunities will be subject to:
-              </p>
-              <ul className="text-xs text-foreground/70 space-y-1 ml-4">
-                <li>• Compliance with applicable securities laws and regulations</li>
-                <li>• Completion of KYC/AML verification procedures</li>
-                <li>• Accredited investor status verification (where required)</li>
-                <li>• Execution of appropriate legal documentation</li>
-                <li>• Investment involves significant risk and may result in loss of capital</li>
+            {/* Benefits highlight */}
+            <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg border border-primary/20">
+              <h4 className="font-semibold mb-3 text-primary">🎁 Quyền lợi độc quyền khi đăng ký:</h4>
+              <ul className="space-y-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  Thông tin đầu tư sớm nhất
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  Giá ưu đãi cho nhà đầu tư tiềm năng
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                  Tư vấn 1-1 từ chuyên gia
+                </li>
               </ul>
             </div>
 
             {/* Submit Button */}
-            <Button variant="hero" size="lg" className="w-full">
-              <Building className="w-5 h-5 mr-2" />
-              Submit Investment Registration
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <Sparkles className="w-5 h-5 mr-2" />
+              Đăng Ký Ngay - Miễn Phí
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
+
+            <p className="text-xs text-center text-foreground/60 mt-4">
+              Bằng cách đăng ký, bạn đồng ý nhận thông tin từ UniLive. Chúng tôi tôn trọng quyền riêng tư của bạn.
+            </p>
           </CardContent>
         </Card>
       </div>
