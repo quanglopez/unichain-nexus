@@ -37,16 +37,16 @@ export const InvestmentForm = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://hook.us2.make.com/yjm0eo343wv5gstsioh9th4g37faymru", {
+      const response = await fetch("https://pcmdeezoexxbxzyipsil.supabase.co/functions/v1/add-to-activecampaign", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
         body: JSON.stringify({
           "Full Name": formData.fullName,
           "Email": formData.email,
-          "Investment Interest": formData.investmentInterest || "Not specified"
+          "Investment Interest": formData.investmentInterest || "Not specified",
+          "Form Type": "Investment Registration"
         }),
       });
 
