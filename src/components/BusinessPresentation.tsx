@@ -3,21 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, Video } from "lucide-react";
 
 export const BusinessPresentation = () => {
-  const timezones = [
-    { country: "Singapore", flag: "🇸🇬", time: "9:00 PM" },
-    { country: "Nigeria", flag: "🇳🇬", time: "2:00 PM" },
-    { country: "South Africa", flag: "🇿🇦", time: "3:00 PM" },
-    { country: "Kenya", flag: "🇰🇪", time: "4:00 PM" },
-    { country: "Uganda", flag: "🇺🇬", time: "4:00 PM" },
-    { country: "Moscow", flag: "🇷🇺", time: "4:00 PM" },
-    { country: "Kiev", flag: "🇺🇦", time: "4:00 PM" },
-    { country: "Dubai", flag: "🇦🇪", time: "5:00 PM" },
-    { country: "Astana", flag: "🇰🇿", time: "6:00 PM" },
-    { country: "Bishkek", flag: "🇰🇬", time: "7:00 PM" },
-    { country: "Vietnam", flag: "🇻🇳", time: "8:00 PM" },
-    { country: "Philippines", flag: "🇵🇭", time: "9:00 PM" },
-    { country: "Mongolia", flag: "🇲🇳", time: "9:00 PM" }
-  ];
 
   return (
     <section className="py-20 px-4 bg-gradient-subtle">
@@ -184,31 +169,6 @@ export const BusinessPresentation = () => {
           </div>
         </div>
 
-        {/* Global Schedule */}
-        <div className="mt-16">
-          <Card className="glass">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-center justify-center">
-                <Clock className="w-6 h-6 text-primary" />
-                Global Schedule
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                {timezones.map((tz, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-background/30 p-3 rounded-lg text-center hover:bg-background/50 transition-smooth"
-                  >
-                    <div className="text-2xl mb-1">{tz.flag}</div>
-                    <div className="font-semibold text-sm">{tz.country}</div>
-                    <div className="text-primary font-bold text-sm">{tz.time}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
 
         {/* Key Benefits */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
