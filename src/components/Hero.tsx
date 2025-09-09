@@ -76,7 +76,16 @@ export const Hero = () => {
         {/* Right content - Hero image */}
         <div className="relative">
           <div className="glass rounded-2xl p-4 glow-green">
-            <img src={heroImage} alt="Unilive Global Community - Local Touch, Global Reach" className="w-full h-auto rounded-xl" />
+            <div className="relative w-full aspect-video">
+              <iframe 
+                src="https://www.youtube.com/embed/9V-CtfulQqs" 
+                title="Unilive Platform Demo" 
+                className="w-full h-full rounded-xl"
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+              />
+            </div>
           </div>
           
           {/* Floating elements */}
