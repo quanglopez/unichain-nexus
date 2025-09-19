@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from 'react-i18next';
 import { 
   Coins, 
   Vote, 
@@ -12,37 +13,38 @@ import {
 } from "lucide-react";
 
 export const UNXToken = () => {
+  const { t } = useTranslation();
+  
   const utilities = [
     {
       icon: TrendingUp,
-      title: "Trading Fee Discounts",
-      description: "Reduce trading costs across UniMex platform"
+      title: t('unxToken.utilities.governance.title'),
+      description: t('unxToken.utilities.governance.description')
     },
     {
       icon: Gift,
-      title: "HODL Mining Rewards",
-      description: "Earn rewards for holding UNX tokens"
+      title: t('unxToken.utilities.feeSharing.title'),
+      description: t('unxToken.utilities.feeSharing.description')
     },
     {
       icon: Vote,
-      title: "Voting & ILO Privileges",
-      description: "Governance rights and early access to launches"
+      title: t('unxToken.utilities.premiumFeatures.title'),
+      description: t('unxToken.utilities.premiumFeatures.description')
     },
     {
       icon: MessageSquare,
-      title: "Social Engagement Spending",
-      description: "Use UNX for tipping, content, and interactions"
+      title: t('unxToken.utilities.stakingRewards.title'),
+      description: t('unxToken.utilities.stakingRewards.description')
     }
   ];
 
   const tokenomicsData = [
-    { label: "Total Supply Target", value: "1,000,000,000 UNX" },
-    { label: "First Month Issuance", value: "500,000 tokens" },
-    { label: "Growth Schedule 2025", value: "10% monthly" },
-    { label: "Growth Schedule 2026", value: "8% monthly" },
-    { label: "Growth Schedule 2027", value: "5% monthly" },
-    { label: "Growth Schedule 2028-2030", value: "3% monthly" },
-    { label: "Growth Schedule 2031-2034", value: "2% monthly" }
+    { label: t('unxToken.tokenomics.totalSupply'), value: "1,000,000,000 UNX" },
+    { label: t('unxToken.tokenomics.initialCirculating'), value: "500,000 tokens" },
+    { label: t('unxToken.tokenomics.teamAllocation'), value: "10% monthly" },
+    { label: t('unxToken.tokenomics.communityRewards'), value: "8% monthly" },
+    { label: t('unxToken.tokenomics.liquidityIncentives'), value: "5% monthly" },
+    { label: t('unxToken.tokenomics.treasuryReserve'), value: "3% monthly" }
   ];
 
   return (
@@ -50,12 +52,12 @@ export const UNXToken = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-glow">UNX Token</span>
+            <span className="text-glow">{t('unxToken.title')}</span>
             <br />
             <span className="text-foreground/80">Utilities & Economics</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            The native token powering the entire UniLive × UniMex ecosystem
+            {t('unxToken.description')}
           </p>
         </div>
 
@@ -86,7 +88,7 @@ export const UNXToken = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
                 <Coins className="w-6 h-6 text-primary" />
-                Tokenomics Overview
+                {t('unxToken.tokenomics.title')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -108,7 +110,7 @@ export const UNXToken = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
                 <Target className="w-6 h-6 text-primary" />
-                Optimal Holding Zone
+                {t('unxToken.holdingZone.title')}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -133,8 +135,7 @@ export const UNXToken = () => {
                     <div>
                       <h5 className="font-semibold mb-1">Optimal Zone Benefits</h5>
                       <p className="text-sm text-foreground/80">
-                        When you hold within the optimal zone, &gt;60% of daily tokens are distributed 
-                        to optimal-zone holders, maximizing your rewards potential.
+                        {t('unxToken.holdingZone.description')}
                       </p>
                     </div>
                   </div>
@@ -148,15 +149,15 @@ export const UNXToken = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <Button variant="hero" size="lg">
             <Coins className="w-5 h-5 mr-2" />
-            Get UNX
+            {t('unxToken.actions.acquireUnx')}
           </Button>
           <Button variant="neon" size="lg">
             <Target className="w-5 h-5 mr-2" />
-            Lock UNX
+            {t('unxToken.actions.lockTokens')}
           </Button>
           <Button variant="ghost" size="lg">
             <Info className="w-5 h-5 mr-2" />
-            View Holding Rewards Guide
+            {t('unxToken.actions.learnMore')}
           </Button>
         </div>
       </div>

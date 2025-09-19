@@ -6,8 +6,10 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCircle } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const FAQ = () => {
+  const { t } = useTranslation();
   const faqs = [
     {
       question: "What is ILO and how does it differ from IEO/IDO?",
@@ -56,12 +58,10 @@ export const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-glow">Frequently Asked</span>
-            <br />
-            <span className="text-foreground/80">Questions</span>
+            <span className="text-glow">{t('faq.title')}</span>
           </h2>
           <p className="text-lg text-foreground/80">
-            Everything you need to know about UniLive × UniMex
+            {t('faq.subtitle')}
           </p>
         </div>
 

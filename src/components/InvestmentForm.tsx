@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
 import { 
   TrendingUp, 
   DollarSign, 
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 
 export const InvestmentForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -89,13 +91,11 @@ export const InvestmentForm = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-glow">Join UniLive's</span>
-            <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Success Story</span>
+            <span className="text-glow">{t('investment.title')}</span>
           </h2>
           
           <p className="text-xl text-foreground/80 mb-8">
-            Register now to receive exclusive investment information and special offers
+            {t('investment.description')}
           </p>
         </div>
 

@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, Calendar, MapPin, Users } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const UniLiveEvents = () => {
+  const { t } = useTranslation();
   const events = [
     {
       title: "UniLive Hồ Chí Minh City",
@@ -68,12 +70,10 @@ export const UniLiveEvents = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-glow">UniLive</span>
-            <br />
-            <span className="text-foreground/80">Global Events</span>
+            <span className="text-glow">{t('uniLiveEvents.title')}</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Experience the energy and innovation of UniLive through our worldwide community events, conferences, and celebrations.
+            {t('uniLiveEvents.subtitle')}
           </p>
         </div>
 

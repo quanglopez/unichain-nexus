@@ -1,25 +1,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Repeat, Layers, Code } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const WhyUs = () => {
+  const { t } = useTranslation();
+  
   const differentiators = [
     {
       icon: Repeat,
-      title: "Trading as Ecosystem",
-      description: "Tightly connects social, gaming, and trading for a capital-efficiency flywheel",
-      benefits: ["Unified user experience", "Cross-platform synergy", "Enhanced capital flow"]
+      title: t('whyUs.innovations.livestreamIlo.title'),
+      description: t('whyUs.innovations.livestreamIlo.description'),
+      benefits: t('whyUs.innovations.livestreamIlo.benefits', { returnObjects: true }) as string[]
     },
     {
       icon: Layers,
-      title: "Liquidity-as-a-Service (LaaS)",
-      description: "Plug-and-play liquidity infrastructure for cross-chain asset circulation",
-      benefits: ["Easy integration", "Cross-chain support", "Instant liquidity"]
+      title: t('whyUs.innovations.interTradeFi.title'),
+      description: t('whyUs.innovations.interTradeFi.description'),
+      benefits: t('whyUs.innovations.interTradeFi.benefits', { returnObjects: true }) as string[]
     },
     {
       icon: Code,
-      title: "Embedded Financial Protocols",
-      description: "Developer-friendly liquidity tools and earn-by-holding mechanics",
-      benefits: ["Developer tools", "Yield generation", "Protocol integration"]
+      title: t('whyUs.innovations.communityFirst.title'),
+      description: t('whyUs.innovations.communityFirst.description'),
+      benefits: t('whyUs.innovations.communityFirst.benefits', { returnObjects: true }) as string[]
     }
   ];
 
@@ -28,10 +31,10 @@ export const WhyUs = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Why <span className="text-glow">UniLive × UniMex</span>?
+            {t('whyUs.title')}
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Three core innovations that set us apart in the Web3 ecosystem
+            {t('whyUs.subtitle')}
           </p>
         </div>
 
@@ -64,7 +67,7 @@ export const WhyUs = () => {
 
         {/* Value Feedback Loop Diagram */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-8">Value Feedback Loop</h3>
+          <h3 className="text-2xl font-bold mb-8">{t('whyUs.valueLoop.title')}</h3>
           
           <Card className="glass max-w-4xl mx-auto">
             <CardContent className="p-8">
@@ -73,7 +76,7 @@ export const WhyUs = () => {
                   <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🎬</span>
                   </div>
-                  <h4 className="font-semibold mb-1">Content Creation</h4>
+                  <h4 className="font-semibold mb-1">{t('whyUs.valueLoop.contentCreation')}</h4>
                   <p className="text-xs text-foreground/70">Livestreams & ILOs</p>
                 </div>
                 
@@ -83,7 +86,7 @@ export const WhyUs = () => {
                   <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">💰</span>
                   </div>
-                  <h4 className="font-semibold mb-1">Trading Activity</h4>
+                  <h4 className="font-semibold mb-1">{t('whyUs.valueLoop.tradingActivity')}</h4>
                   <p className="text-xs text-foreground/70">UniMex Platform</p>
                 </div>
                 
@@ -93,15 +96,14 @@ export const WhyUs = () => {
                   <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🔄</span>
                   </div>
-                  <h4 className="font-semibold mb-1">Fee Distribution</h4>
+                  <h4 className="font-semibold mb-1">{t('whyUs.valueLoop.feeDistribution')}</h4>
                   <p className="text-xs text-foreground/70">Back to Ecosystem</p>
                 </div>
               </div>
               
               <div className="mt-6 p-4 bg-primary/10 rounded-lg">
                 <p className="text-sm text-center text-foreground/80">
-                  A share of trading fees flows back through the ecosystem to reinforce participation, 
-                  creating a sustainable flywheel of value creation and distribution.
+                  {t('whyUs.valueLoop.description')}
                 </p>
               </div>
             </CardContent>

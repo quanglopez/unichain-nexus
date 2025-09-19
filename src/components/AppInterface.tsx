@@ -1,29 +1,32 @@
 import { Card } from "@/components/ui/card";
 import { Smartphone, MessageCircle, Users, Video, Star } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const AppInterface = () => {
+  const { t } = useTranslation();
+  
   const appFeatures = [
     {
       icon: MessageCircle,
-      title: "Interactive Messaging",
+      title: t('appInterface.features.realTime'),
       description: "Connect with UniLive Official Interaction Group and community members",
       image: "/lovable-uploads/75d87144-c2a3-4180-bd02-d0abde588443.png"
     },
     {
       icon: Users,
-      title: "Creator Profiles",
+      title: t('appInterface.features.crossChain'),
       description: "Showcase your content and build your following with detailed profiles",
       image: "/lovable-uploads/6f680301-bf5d-4757-9412-4aea27b7fd77.png"
     },
     {
       icon: Video,
-      title: "Live Streaming",
+      title: t('appInterface.features.aiPowered'),
       description: "Stream live content and interact with audiences in real-time",
       image: "/lovable-uploads/a071be67-3e48-4b00-8b1f-b7361e26981b.png"
     },
     {
       icon: Star,
-      title: "Discover & Recommend",
+      title: t('appInterface.features.socialTrading'),
       description: "Explore trending content and discover new creators",
       image: "/lovable-uploads/f78afce1-e29a-4b41-8103-0e0d8eda9e45.png"
     }
@@ -36,12 +39,11 @@ const AppInterface = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <Smartphone className="w-8 h-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold gradient-text">
-              UniLive Mobile App
+              {t('appInterface.title')}
             </h2>
           </div>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Experience the future of live streaming and trading with our intuitive mobile application. 
-            Connect, stream, and trade seamlessly on the go.
+            {t('appInterface.subtitle')}
           </p>
         </div>
 

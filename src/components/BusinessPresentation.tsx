@@ -1,20 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, Video } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const BusinessPresentation = () => {
+  const { t } = useTranslation();
 
   return (
     <section className="py-20 px-4 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-glow">Weekly Business</span>
-            <br />
-            <span className="text-foreground/80">Presentation Zoom</span>
+            <span className="text-glow">{t('presentation.title')}</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Join our power-packed Zoom sessions where global communities discover UniMex's earning opportunities - no trading, no stress, just smart digital income.
+            {t('presentation.subtitle')}
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export const BusinessPresentation = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    Join Zoom Session
+                    {t('presentation.download')}
                   </a>
                 </Button>
               </CardContent>
