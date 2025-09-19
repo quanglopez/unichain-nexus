@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 import { 
   Download, 
   TrendingUp, 
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer id="contact" className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 bg-gradient-dark border-t border-white/10">
       <div className="max-w-7xl mx-auto">
@@ -91,10 +93,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary mb-4">Platform</h4>
             <ul className="space-y-2 text-sm text-foreground/80">
-              <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#unx-token" className="hover:text-primary transition-colors">UNX Token</a></li>
+              <li><a href="#features" className="hover:text-primary transition-colors">{t('nav.features')}</a></li>
+              <li><a href="#unx-token" className="hover:text-primary transition-colors">{t('nav.token')}</a></li>
               <li><a href="#cornerstone" className="hover:text-primary transition-colors">Cornerstone Program</a></li>
-              <li><a href="#roadmap" className="hover:text-primary transition-colors">Roadmap</a></li>
+              <li><a href="#roadmap" className="hover:text-primary transition-colors">{t('nav.roadmap')}</a></li>
             </ul>
           </div>
           
@@ -111,7 +113,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-foreground/80">
-              <li><a href="#faq" className="hover:text-primary transition-colors">FAQ</a></li>
+              <li><a href="#faq" className="hover:text-primary transition-colors">{t('nav.faq')}</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">API Reference</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
@@ -119,10 +121,10 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-primary mb-4">Legal</h4>
+            <h4 className="font-semibold text-primary mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm text-foreground/80">
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.termsOfService')}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.privacyPolicy')}</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Risk Disclosure</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Compliance</a></li>
             </ul>
@@ -132,7 +134,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-white/10">
           <p className="text-sm text-foreground/60">
-            © 2024 UniLive × UniMex. All rights reserved. | 
+            © 2024 UniLive × UniMex. {t('footer.rightReserved')} | 
             <span className="text-primary"> Building the Future of Web3 Finance</span>
           </p>
         </div>

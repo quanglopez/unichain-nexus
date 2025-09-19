@@ -2,19 +2,19 @@ import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "./LanguageToggle";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navItems = [
-    { label: "Home", href: "#hero" },
+    { label: t('nav.home'), href: "#hero" },
     { label: "Why UniLive × UniMex", href: "#why-us" },
-    
-    { label: "UNX Token", href: "#unx-token" },
+    { label: t('nav.token'), href: "#unx-token" },
     { label: "Cornerstone", href: "#cornerstone" },
-    
-    { label: "Roadmap", href: "#roadmap" },
-    { label: "FAQ", href: "#faq" },
+    { label: t('nav.roadmap'), href: "#roadmap" },
+    { label: t('nav.faq'), href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -45,7 +45,7 @@ export const Navigation = () => {
             <LanguageToggle />
             <Button variant="neon" size="sm" asChild>
               <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
-                Join Cornerstone
+                {t('nav.joinCornerstone')}
               </a>
             </Button>
           </div>
@@ -80,7 +80,7 @@ export const Navigation = () => {
               <div className="px-4 py-3">
                 <Button variant="neon" size="sm" className="w-full" asChild>
                   <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
-                    Join Cornerstone
+                    {t('nav.joinCornerstone')}
                   </a>
                 </Button>
               </div>

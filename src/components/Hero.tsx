@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, TrendingUp, Star, CheckCircle, Users, Globe } from "lucide-react";
+import { useTranslation } from 'react-i18next';
+
 const heroImage = "/lovable-uploads/297c370f-d3f9-48b1-aec2-e4523fbf348e.png";
+
 export const Hero = () => {
+  const { t } = useTranslation();
   return <section id="hero" className="min-h-screen flex items-center justify-center pt-20 sm:pt-16 px-3 sm:px-4 relative overflow-hidden">
       {/* Background grid effect */}
       <div className="absolute inset-0 grid-bg opacity-30"></div>
@@ -59,7 +63,7 @@ export const Hero = () => {
             <Button variant="ghost" size="lg" className="text-foreground/80" asChild>
               <a href="https://h.tsggwh.com/#/login?recomId=gsZKfD&language=en_US" target="_blank" rel="noopener noreferrer">
                 <Star className="w-5 h-5 mr-2" />
-                Join Cornerstone
+                {t('hero.cta')}
               </a>
             </Button>
           </div>

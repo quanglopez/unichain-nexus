@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
 import { 
   Shield, 
   Star, 
@@ -18,6 +19,7 @@ import {
 } from "lucide-react";
 
 export const Cornerstone = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -129,12 +131,12 @@ export const Cornerstone = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="text-glow">Cornerstone Program</span>
+            <span className="text-glow">{t('cornerstone.title')}</span>
             <br />
             <span className="text-foreground/80">Bank-Level Security & Compliance</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            A premium staking program aligned with institutional standards for fund security and regulatory compliance
+            {t('cornerstone.subtitle')}
           </p>
         </div>
 
@@ -206,30 +208,30 @@ export const Cornerstone = () => {
           <CardHeader>
             <CardTitle className="text-center flex items-center justify-center gap-3">
               <Shield className="w-6 h-6 text-primary" />
-              Apply to Cornerstone Program
+              {t('cornerstone.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="name">Full Name *</Label>
+                  <Label htmlFor="name">{t('investment.form.name')} *</Label>
                   <Input 
                     id="name" 
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Enter your full name"
+                    placeholder={t('investment.form.namePlaceholder')}
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email Address *</Label>
+                  <Label htmlFor="email">{t('investment.form.email')} *</Label>
                   <Input 
                     id="email" 
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your.email@example.com"
+                    placeholder={t('investment.form.emailPlaceholder')}
                     required
                   />
                 </div>
@@ -246,12 +248,12 @@ export const Cornerstone = () => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="country">Country</Label>
+                  <Label htmlFor="country">{t('investment.form.country')}</Label>
                   <Input 
                     id="country"
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                    placeholder="Your country"
+                    placeholder={t('investment.form.selectCountry')}
                   />
                 </div>
               </div>
@@ -271,7 +273,7 @@ export const Cornerstone = () => {
                 className="w-full"
               >
                 <TrendingUp className="w-5 h-5 mr-2" />
-                {isLoading ? "Submitting..." : "Submit Application"}
+                {isLoading ? t('investment.form.submitting') : t('investment.form.submit')}
               </Button>
             </form>
           </CardContent>

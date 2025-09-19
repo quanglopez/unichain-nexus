@@ -1,13 +1,16 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const LanguageToggle = () => {
-  const [language, setLanguage] = useState<'en' | 'vi'>('en');
-
+  const { i18n } = useTranslation();
+  
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'vi' : 'en');
+    const newLang = i18n.language === 'en' ? 'ru' : 'en';
+    i18n.changeLanguage(newLang);
   };
+
+  const currentLang = i18n.language === 'ru' ? 'RU' : 'EN';
 
   return (
     <Button 
@@ -17,7 +20,7 @@ export const LanguageToggle = () => {
       className="gap-1"
     >
       <Globe className="w-4 h-4" />
-      {language.toUpperCase()}
+      {currentLang}
     </Button>
   );
 };

@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "token": "UNX Token", 
+    "roadmap": "Roadmap",
+    "faq": "FAQ",
+    "joinCornerstone": "Join Cornerstone"
+  },
+  "hero": {
+    "title": "The Future of DeFi Trading",
+    "subtitle": "Revolutionary platform combining livestream ILOs, advanced trading tools, and community-driven innovation",
+    "cta": "Join Cornerstone",
+    "learnMore": "Learn More"
+  },
+  "problemSolution": {
+    "title": "Bridging the Gap in DeFi",
+    "description": "We're solving the critical challenges that prevent mainstream DeFi adoption",
+    "problem": {
+      "title": "The Problem", 
+      "complexOnboarding": "Complex onboarding scares away new users",
+      "fragileLiquidity": "Fragile liquidity leads to poor trading experiences",
+      "disconnectedJourney": "Disconnected user journeys across platforms"
+    },
+    "solution": {
+      "title": "Our Solution",
+      "uniLive": "ILO via Livestream (UniLive)",
+      "uniMex": "InterTradeFi (UniMex)",
+      "valueBridge": "Value Bridge"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose UniLive × UniMex?",
+    "subtitle": "Our unique innovations create unprecedented value for the DeFi ecosystem",
+    "innovations": {
+      "livestreamIlo": {
+        "title": "Livestream ILO Innovation",
+        "description": "World's first livestream-based Initial Liquidity Offering",
+        "benefits": [
+          "Real-time community engagement",
+          "Transparent price discovery", 
+          "Reduced manipulation risks"
+        ]
+      },
+      "interTradeFi": {
+        "title": "InterTradeFi Technology",
+        "description": "Advanced cross-chain trading infrastructure",
+        "benefits": [
+          "Seamless multi-chain execution",
+          "Optimized liquidity routing",
+          "Enhanced capital efficiency"
+        ]
+      },
+      "communityFirst": {
+        "title": "Community-First Approach",
+        "description": "Every feature designed with community needs in mind",
+        "benefits": [
+          "Democratic governance structure",
+          "Fair value distribution",
+          "Sustainable growth model"
+        ]
+      }
+    },
+    "valueLoop": {
+      "title": "Value Feedback Loop",
+      "contentCreation": "Content Creation",
+      "tradingActivity": "Trading Activity", 
+      "feeDistribution": "Fee Distribution",
+      "description": "This creates a powerful flywheel effect where increased content creation drives more trading activity, generating fees that are distributed back to token holders and content creators, incentivizing further participation and growth."
+    }
+  },
+  "unxToken": {
+    "title": "UNX Token",
+    "description": "The native utility token powering the UniMex ecosystem",
+    "utilities": {
+      "governance": {
+        "title": "Governance Rights",
+        "description": "Vote on protocol upgrades, fee structures, and ecosystem development"
+      },
+      "feeSharing": {
+        "title": "Fee Sharing",
+        "description": "Receive a portion of platform trading fees based on your stake"
+      },
+      "premiumFeatures": {
+        "title": "Premium Features",
+        "description": "Access advanced trading tools and analytics"
+      },
+      "stakingRewards": {
+        "title": "Staking Rewards", 
+        "description": "Earn additional UNX through various staking programs"
+      }
+    },
+    "tokenomics": {
+      "title": "Tokenomics",
+      "totalSupply": "Total Supply",
+      "initialCirculating": "Initial Circulating",
+      "teamAllocation": "Team Allocation",
+      "communityRewards": "Community Rewards",
+      "liquidityIncentives": "Liquidity Incentives",
+      "treasuryReserve": "Treasury Reserve"
+    },
+    "holdingZone": {
+      "title": "Optimal Holding Zone",
+      "description": "Lock your UNX tokens for enhanced rewards and governance power. Longer lock periods provide higher reward multipliers and voting weight in platform decisions."
+    },
+    "actions": {
+      "acquireUnx": "Acquire UNX",
+      "lockTokens": "Lock Tokens",
+      "learnMore": "Learn More"
+    }
+  },
+  "investment": {
+    "title": "Investment Opportunities",
+    "description": "Join our funding rounds and become part of the DeFi revolution",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "country": "Country",
+      "investmentAmount": "Investment Amount (USD)",
+      "investorType": "Investor Type",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "namePlaceholder": "Enter your full name",
+      "emailPlaceholder": "Enter your email address",
+      "phonePlaceholder": "Enter your phone number",
+      "selectCountry": "Select your country",
+      "selectInvestorType": "Select investor type",
+      "types": {
+        "individual": "Individual Investor",
+        "institutional": "Institutional Investor",
+        "accredited": "Accredited Investor",
+        "family": "Family Office"
+      }
+    }
+  },
+  "presentation": {
+    "title": "Business Presentation",
+    "subtitle": "Comprehensive overview of our vision, technology, and market opportunity",
+    "download": "Download Presentation"
+  },
+  "appInterface": {
+    "title": "Advanced Trading Interface",
+    "subtitle": "Experience the future of DeFi trading with our intuitive platform",
+    "features": {
+      "realTime": "Real-time market data and advanced charting",
+      "crossChain": "Cross-chain trading capabilities", 
+      "aiPowered": "AI-powered trading insights and analytics",
+      "socialTrading": "Social trading and copy trading features"
+    }
+  },
+  "uniLiveEvents": {
+    "title": "UniLive Events",
+    "subtitle": "Join live streaming events where new projects launch through our innovative ILO platform"
+  },
+  "cornerstone": {
+    "title": "Join Cornerstone",
+    "subtitle": "Be part of the founding community that shapes the future of DeFi",
+    "description": "Cornerstone members get exclusive access to early features, governance participation, and special rewards. Join a community of innovators building the next generation of decentralized finance.",
+    "joinNow": "Join Now"
+  },
+  "roadmap": {
+    "title": "Development Roadmap", 
+    "subtitle": "Our journey to revolutionize DeFi trading and community engagement"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to common questions about our platform"
+  },
+  "footer": {
+    "description": "Revolutionary DeFi platform combining livestream ILOs, advanced trading, and community governance.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy", 
+    "termsOfService": "Terms of Service",
+    "rightReserved": "All rights reserved."
+  },
+  "stickyActions": {
+    "joinCornerstone": "Join Cornerstone",
+    "contactTelegram": "Contact via Telegram"
+  }
+}
