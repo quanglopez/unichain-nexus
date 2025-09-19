@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Building, Award, Globe } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const Team = () => {
+  const { t } = useTranslation();
   const teamMembers = [
     {
       role: "CEO",
@@ -40,12 +42,12 @@ export const Team = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-glow">Team & Partners</span>
+            <span className="text-glow">{t('team.title')}</span>
             <br />
-            <span className="text-foreground/80">Building the Future Together</span>
+            <span className="text-foreground/80">{t('team.subtitle')}</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Backed by industry veterans and leading blockchain organizations
+            {t('team.description')}
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from 'react-i18next';
 import { 
   Video, 
   Zap, 
@@ -12,31 +13,33 @@ import {
 } from "lucide-react";
 
 export const Features = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Video,
-      title: "Live Token Issuance (ILO)",
+      title: t('features.livestreamILO'),
       description: "Run token launches on livestream with transparent rules and community interaction",
       badges: ["Transparent", "Interactive", "Community-Driven"],
       highlight: true
     },
     {
       icon: Bot,
-      title: "AIGC & Real-time AI Translation",
+      title: t('features.aigcTranslation'),
       description: "Auto-generate content with live captions and voice in multiple languages",
       badges: ["AI-Powered", "Global Reach", "Auto-Generated"],
       highlight: false
     },
     {
       icon: MessageSquare,
-      title: "Social + E-commerce Stack",
+      title: t('features.socialCommerce'),
       description: "Complete suite: short video, IM/chat, mini-series, tipping, live-commerce",
       badges: ["Social", "Commerce", "Content"],
       highlight: false
     },
     {
       icon: TrendingUp,
-      title: "Interactive Trading (UniMex)",
+      title: t('features.interactiveTrading'),
       description: "One-click entry with smart strategy helpers and multi-scenario coverage",
       badges: ["One-Click", "Smart Trading", "Multi-Asset"],
       highlight: true
@@ -48,12 +51,12 @@ export const Features = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            <span className="text-glow">Revolutionary Features</span>
+            <span className="text-glow">{t('features.title')}</span>
             <br />
-            <span className="text-foreground/80">for Web3 Innovation</span>
+            <span className="text-foreground/80">{t('features.subtitle')}</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Everything you need to launch, trade, and grow in the decentralized economy
+            {t('features.description')}
           </p>
         </div>
 
