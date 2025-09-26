@@ -109,30 +109,18 @@
       "learnMore": "Learn More"
     }
   },
-  "investment": {
-    "title": "Investment Opportunities",
-    "description": "Join our funding rounds and become part of the DeFi revolution",
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "country": "Country",
-      "investmentAmount": "Investment Amount (USD)",
-      "investorType": "Investor Type",
-      "submit": "Submit Application",
-      "submitting": "Submitting...",
-      "namePlaceholder": "Enter your full name",
-      "emailPlaceholder": "Enter your email address",
-      "phonePlaceholder": "Enter your phone number",
-      "selectCountry": "Select your country",
-      "selectInvestorType": "Select investor type",
-      "types": {
-        "individual": "Individual Investor",
-        "institutional": "Institutional Investor",
-        "accredited": "Accredited Investor",
-        "family": "Family Office"
-      }
-    }
+  "tiktok": {
+    "badge": "Revolutionary Crypto Platform",
+    "title": "\"Tik-Tok\" Meets Crypto And Pays YOU 3 Times Per Day In USDT!",
+    "description": "Join the world's first social crypto platform where creating content pays you in real cryptocurrency, automatically deposited 3 times daily.",
+    "formTitle": "Early Access Registration",
+    "formSubtitle": "Get instant access to daily USDT earnings!",
+    "benefitsTitle": "What you get when you join:",
+    "benefit1": "Earn USDT 3 times per day automatically",
+    "benefit2": "Create viral content and get paid instantly",
+    "benefit3": "Join exclusive crypto community features",
+    "registerButton": "Start Earning USDT Today - Free",
+    "submitting": "Joining..."
   },
   "presentation": {
     "title": "Business Presentation",

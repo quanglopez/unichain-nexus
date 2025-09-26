@@ -48,7 +48,7 @@ export const InvestmentForm = () => {
           "Full Name": formData.fullName,
           "Email": formData.email,
           "Investment Interest": formData.investmentInterest || "Not specified",
-          "Form Type": "Investment Registration"
+          "Form Type": "TikTok Early Access Registration"
         }),
       });
 
@@ -85,17 +85,17 @@ export const InvestmentForm = () => {
       
       <div className="max-w-2xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Exclusive Investment Opportunity</span>
+            <span className="text-sm font-medium text-primary">{t('tiktok.badge')}</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-glow">{t('investment.title')}</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            <span className="text-glow">{t('tiktok.title')}</span>
           </h2>
           
           <p className="text-xl text-foreground/80 mb-8">
-            {t('investment.description')}
+            {t('tiktok.description')}
           </p>
         </div>
 
@@ -103,9 +103,9 @@ export const InvestmentForm = () => {
           <CardHeader className="text-center pb-8">
             <CardTitle className="flex items-center justify-center gap-3 text-2xl">
               <TrendingUp className="w-7 h-7 text-primary" />
-              Investment Registration
+              {t('tiktok.formTitle')}
             </CardTitle>
-            <p className="text-foreground/70 mt-2">Takes only 30 seconds to join!</p>
+            <p className="text-foreground/70 mt-2">{t('tiktok.formSubtitle')}</p>
           </CardHeader>
           
           <CardContent>
@@ -162,19 +162,19 @@ export const InvestmentForm = () => {
 
             {/* Benefits highlight */}
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg border border-primary/20">
-              <h4 className="font-semibold mb-3 text-primary">🎁 Exclusive benefits when you register:</h4>
+              <h4 className="font-semibold mb-3 text-primary">🎁 {t('tiktok.benefitsTitle')}</h4>
               <ul className="space-y-2 text-sm text-foreground/80">
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  Early access to investment information
+                  {t('tiktok.benefit1')}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  Preferential pricing for potential investors
+                  {t('tiktok.benefit2')}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  1-on-1 consultation with experts
+                  {t('tiktok.benefit3')}
                 </li>
               </ul>
             </div>
@@ -188,7 +188,7 @@ export const InvestmentForm = () => {
                 className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
-                {isLoading ? "Submitting..." : "Register Now - Free"}
+                {isLoading ? t('tiktok.submitting') : t('tiktok.registerButton')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
 
